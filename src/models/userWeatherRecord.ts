@@ -27,6 +27,16 @@ const userWeatherRecordSchema: Schema = new Schema(
       default: Date.now,
       required: true,
     },
+    location: {
+      lon: {
+        type: Number,
+        required: true,
+      },
+      lat: {
+        type: Number,
+        required: true,
+      },
+    },
     dt: {
       type: Number,
       required: true,

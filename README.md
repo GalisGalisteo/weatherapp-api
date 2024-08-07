@@ -1,5 +1,7 @@
 
-# Weather App Backend
+# WeatherApp Backend
+
+![Logo](https://raw.githubusercontent.com/GalisGalisteo/weatherapp-front/main/public/logo.png)
 
 ## Description
 
@@ -21,7 +23,7 @@ This project provides the backend API for the WeatherApp. It allows clients to f
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/galisgaliste/weatherapp-api.git
+   git clone https://github.com/GalisGalisteo/weatherapp-api
    cd weatherapp-api
    ```
 
@@ -64,24 +66,24 @@ This project provides the backend API for the WeatherApp. It allows clients to f
 ## Project Structure
 
 ```
-.
-├── config
+src/
+├── config/
 │   └── constants.ts
-├── controllers
+├── controllers/
 │   └── weatherController.ts
-├── middleware
+├── middleware/
 │   └── errorHandler.ts
-├── models
+├── models/
 │   ├── location.ts
 │   └── userWeatherRecord.ts
-├── routes
+├── routes/
 │   └── router.ts
-├── services
+├── services/
 │   └── weatherService.ts
-├── types
+├── types/
 │   ├── locationInterfaces.ts
 │   └── weatherInterfaces.ts
-├── utils
+├── utils/
 │   └── getWeather.ts
 ├── app.ts
 └── server.ts

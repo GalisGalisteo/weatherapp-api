@@ -58,6 +58,10 @@ export const getLocationWeather = async (
     UserWeatherRecord.create({
       ...current,
       searchDate: new Date(),
+      location: {
+        lon,
+        lat,
+      },
     });
 
     return {
