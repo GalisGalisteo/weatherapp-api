@@ -10,7 +10,7 @@ export const getLocationWeather = async (
     const { lon, lat } = req.query;
     const location = { lon: Number(lon), lat: Number(lat) };
     const weatherData = await locationsService.getLocationWeather(location);
-    res.status(201).json(weatherData);
+    res.status(200).json(weatherData);
   } catch (error) {
     next(error);
   }

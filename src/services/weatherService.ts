@@ -2,7 +2,8 @@ import Joi from "joi";
 import { Location } from "../models/location.js";
 import { UserWeatherRecord } from "../models/userWeatherRecord.js";
 import { getWeather } from "../utils/getWeather.js";
-import { LocationInput } from "../types/locationInterfaces.js";
+import { ILocation, LocationInput } from "../types/locationInterfaces.js";
+import { WeatherData } from "../types/weatherInterfaces.js";
 
 /**
  * Joi schema for validating location input.
@@ -19,12 +20,17 @@ const locationSchema = Joi.object({
  * @param {Object} location - The location input.
  * @param {number} location.lon - The longitude of the location.
  * @param {number} location.lat - The latitude of the location.
- * @returns {Promise<Object>} The location and weather data.
+ * @returns {Promise<GetLocationWeather>} The location and weather data.
  */
+
+interface GetLocationWeather {
+  locations: ILocation[];
+  weather: WeatherData;
+}
 
 export const getLocationWeather = async (
   location: LocationInput
-): Promise<object> => {
+): Promise<GetLocationWeather> => {
   const { error, value } = locationSchema.validate(location);
   if (error) {
     console.error(`Validation Error: ${error.details[0].message}`);
@@ -52,6 +58,8 @@ export const getLocationWeather = async (
     }
 
     const weather = await getWeather(lon, lat);
+
+    console.log(weather);
 
     const { current } = weather;
 

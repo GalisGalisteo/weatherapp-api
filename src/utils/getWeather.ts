@@ -6,7 +6,7 @@ import { WeatherData } from "../types/weatherInterfaces.js";
  *
  * @param {number} lon - The longitude of the location.
  * @param {number} lat - The latitude of the location.
- * @returns {Promise<Object>} The weather data.
+ * @returns {Promise<WeatherData>} The weather data.
  */
 
 export const getWeather = async (
