@@ -1,12 +1,11 @@
 import request from "supertest";
 import { MongoMemoryServer } from "mongodb-memory-server";
 import mongoose from "mongoose";
-
 import app from "../app";
 import { Location } from "../models/location";
 import { UserWeatherRecord } from "../models/userWeatherRecord";
 import { getWeather } from "../utils/getWeather";
-import { mockWeatherData } from "./dataForTests";
+import { mockWeatherData } from "./mockData";
 
 jest.mock("../utils/getWeather");
 

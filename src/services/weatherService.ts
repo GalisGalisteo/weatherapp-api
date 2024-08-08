@@ -59,8 +59,6 @@ export const getLocationWeather = async (
 
     const weather = await getWeather(lon, lat);
 
-    console.log(weather);
-
     const { current } = weather;
 
     UserWeatherRecord.create({

@@ -1,10 +1,10 @@
+import { MongoMemoryServer } from "mongodb-memory-server";
+import mongoose from "mongoose";
 import { getLocationWeather } from "../services/weatherService";
 import { Location } from "../models/location";
 import { UserWeatherRecord } from "../models/userWeatherRecord";
 import { getWeather } from "../utils/getWeather";
-import mongoose from "mongoose";
-import { MongoMemoryServer } from "mongodb-memory-server";
-import { mockLocationData, mockWeatherData } from "./dataForTests";
+import { mockLocationData, mockWeatherData } from "./mockData";
 
 jest.mock("../utils/getWeather");
 

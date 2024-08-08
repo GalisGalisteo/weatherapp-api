@@ -1,6 +1,6 @@
-import { getWeather } from "../utils/getWeather";
 import { weatherApiKey } from "../config/constants";
-import { mockWeatherData } from "./dataForTests";
+import { getWeather } from "../utils/getWeather";
+import { mockWeatherData } from "./mockData";
 
 global.fetch = jest.fn();
 
