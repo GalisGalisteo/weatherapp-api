@@ -41,7 +41,7 @@ This project provides the backend API for the WeatherApp. It allows clients to f
 
 4. Start the server:
    ```sh
-   npm start
+   npm run start-local
    ```
 
 ## API Endpoints

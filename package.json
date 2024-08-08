@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "start": "npm run build && node ./dist/server.js",
+    "start": "node ./dist/server.js",
+    "heroku-postbuild": "npm run build",
+    "start-local": "npm run build && node ./dist/server.js",
     "test": "jest --coverage "
   },
   "keywords": [],
