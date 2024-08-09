@@ -33,8 +33,8 @@ This project provides the backend API for the WeatherApp. It allows clients to f
    ```
 
 3. Create a `.env` file in the root of the project and add your environment variables:
-   ```env
-   PORT=4000 (or any port you prefer)
+   ```js
+   PORT=4000 // or any port you prefer
    MONGODB_URI=your-mongodb-uri
    WEATHER_API_KEY=your-openweathermap-api-key
    ```
@@ -51,8 +51,9 @@ This project provides the backend API for the WeatherApp. It allows clients to f
 - **URL:** `/weather`
 - **Method:** `GET`
 - **Query Parameters:**
-  - `lon` (required): Longitude of the location.
-  - `lat` (required): Latitude of the location.
+  - `lon` (required): Longitude of the location. Must be a valid number between -180 and 180.
+  - `lat` (required): Latitude of the location. Must be a valid number between -90 and 90.
+
 - **Success Response:**
   - **Code:** 200
   - **Content:**
